@@ -11,7 +11,8 @@ var scoreDisplay = document.getElementById("score")
 function check()
 {
     var userGuess = enteredNumber.value
-
+    if(score>0)
+    {
     if(randomNumber == userGuess)
     {
         result.textContent = "🎉 You're Right"
@@ -26,5 +27,10 @@ function check()
         scoreDisplay.textContent = "Score : " + score
 
         result.textContent = "❌ You're Wrong"
+    }
+    }
+    else
+    {
+        alert("You Failed!!!")
     }
 }
